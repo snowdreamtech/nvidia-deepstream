@@ -1,6 +1,6 @@
 # ubuntu
 
-[![ubuntu](http://dockeri.co/image/snowdreamtech/ubuntu)](https://hub.docker.com/r/snowdreamtech/ubuntu)
+[![ubuntu](http://dockeri.co/image/snowdreamtech/nvidia-deepstream)](https://hub.docker.com/r/snowdreamtech/nvidia-deepstream)
 
 Docker Image packaging for ubuntu. (amd64, arm32v7, arm64v8, ppc64le,riscv64, s390x)
 
@@ -17,7 +17,7 @@ docker run -d \
   --name=ubuntu \
   -e TZ=Asia/Shanghai \
   --restart unless-stopped \
-  snowdreamtech/ubuntu:latest
+  snowdreamtech/nvidia-deepstream:latest
 ```
 
 ### Advance
@@ -28,7 +28,7 @@ docker run -d \
   -e TZ=Asia/Shanghai \
   -v /path/to/data:/path/to/data \
   --restart unless-stopped \
-  snowdreamtech/ubuntu:latest
+  snowdreamtech/nvidia-deepstream:latest
 ```
 
 ## Docker Compose
@@ -40,7 +40,7 @@ version: "3"
 
 services:
   ubuntu:
-    image: snowdreamtech/ubuntu:latest
+    image: snowdreamtech/nvidia-deepstream:latest
     container_name: ubuntu
     environment:
       - TZ=Asia/Shanghai
@@ -54,7 +54,7 @@ version: "3"
 
 services:
   ubuntu:
-    image: snowdreamtech/ubuntu:latest
+    image: snowdreamtech/nvidia-deepstream:latest
     container_name: ubuntu
     environment:
       - TZ=Asia/Shanghai
@@ -67,7 +67,7 @@ services:
 
 ```bash
 docker buildx create --use --name build --node build --driver-opt network=host
-docker buildx build -t snowdreamtech/ubuntu --platform=linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/riscv64,linux/s390x . --push
+docker buildx build -t snowdreamtech/nvidia-deepstream --platform=linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/riscv64,linux/s390x . --push
 ```
 
 ## Reference

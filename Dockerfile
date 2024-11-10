@@ -3,14 +3,14 @@ FROM nvcr.io/nvidia/deepstream:7.1-triton-multiarch
 # OCI annotations to image
 LABEL org.opencontainers.image.authors="Snowdream Tech" \
     org.opencontainers.image.title="Ubuntu Base Image" \
-    org.opencontainers.image.description="Docker Images for Ubuntu. (amd64, arm32v7, arm64,ppc64le,riscv64,s390x)" \
-    org.opencontainers.image.documentation="https://hub.docker.com/r/snowdreamtech/ubuntu" \
-    org.opencontainers.image.base.name="snowdreamtech/ubuntu:latest" \
+    org.opencontainers.image.description="Docker Images for nvidia/deepstream. (amd64, arm64)" \
+    org.opencontainers.image.documentation="https://hub.docker.com/r/snowdreamtech/nvidia-deepstream" \
+    org.opencontainers.image.base.name="snowdreamtech/nvidia-deepstream:latest" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.source="https://github.com/snowdreamtech/ubuntu" \
+    org.opencontainers.image.source="https://github.com/snowdreamtech/nvidia-deepstream" \
     org.opencontainers.image.vendor="Snowdream Tech" \
-    org.opencontainers.image.version="24.10" \
-    org.opencontainers.image.url="https://github.com/snowdreamtech/ubuntu"
+    org.opencontainers.image.version="7.1-triton-multiarch" \
+    org.opencontainers.image.url="https://github.com/snowdreamtech/nvidia-deepstream"
 
 ENV DEBIAN_FRONTEND=noninteractive \
     # keep the docker container running
