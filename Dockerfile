@@ -1,4 +1,4 @@
-FROM ubuntu:24.10
+FROM nvcr.io/nvidia/deepstream:7.1-triton-multiarch
 
 # OCI annotations to image
 LABEL org.opencontainers.image.authors="Snowdream Tech" \
