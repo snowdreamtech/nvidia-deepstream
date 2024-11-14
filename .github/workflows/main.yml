@@ -30,9 +30,9 @@ on:
       - "feature/**"
       - "fix/**"
       - "pr/**"
-  schedule:
-    # Automatically run on every Day
-    - cron: "0 17 * * *"
+  # schedule:
+  #   # Automatically run on every Day
+  #   - cron: "0 17 * * *"
   workflow_dispatch:
 
 jobs:
